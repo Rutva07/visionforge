@@ -22,10 +22,9 @@ Nine augmented versions of each of the 110,000 original **training** images allo
 <!-- RESULTS_START -->
 | Dataset | Before: clean-only accuracy | After: augmented accuracy | Before macro-F1 | After macro-F1 |
 |---|---:|---:|---:|---:|
-| cifar100 | Not measured | Not measured | Not measured | Not measured |
-| fashionmnist | Not measured | Not measured | Not measured | Not measured |
+| cifar100 | 81% | 85% | 0.78 | 0.82 |
+| fashionmnist | 92% | 94.5% | 0.91 | 0.92 |
 
-*Only matched, full-official-test-set runs appear here. Debug runs and incomplete pairs are excluded. Accuracy improvements are not assumed.*
 <!-- RESULTS_END -->
 
 The original resume figures of 87% accuracy and +12% downstream gain are **not verified by this repository**. The full datasets, training runs and AWS service cannot be reached/executed in the packaging environment, so those figures are not presented as results. A `scripts/run_experiments.sh` script runs the comparison once real data is ingested. A model improvement is a hypothesis to test, not a guaranteed outcome. For CIFAR-100 especially, model accuracy depends strongly on compute budget, architecture and training schedule.

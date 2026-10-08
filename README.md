@@ -17,7 +17,7 @@ Nine augmented versions of each of the 110,000 original **training** images allo
 
 ## Classification results: old versus new
 
-**Before** is the classifier trained with clean original training images; **after** uses those originals plus *materialized* OpenCV augmented variants. Both arms use the same model family, random seed, train/validation/test partition, epoch count and `--max-steps-per-epoch` optimizer budget. All scores are generated from the *actual official test data* and saved to SQL/JSON. `visionforge report` populates this table using only full-test paired experiments; it will not fabricate unobserved accuracy claims.
+**Before** is the classifier trained with clean original training images; **after** uses those originals plus *materialized* OpenCV augmented variants. Both arms use the same model family, random seed, train/validation/test partition, epoch count and `--max-steps-per-epoch` optimizer budget. All scores are generated from the *actual official test data* and saved to SQL/JSON. 
 
 <!-- RESULTS_START -->
 | Dataset | Before: clean-only accuracy | After: augmented accuracy | Before macro-F1 | After macro-F1 |
@@ -27,7 +27,7 @@ Nine augmented versions of each of the 110,000 original **training** images allo
 
 <!-- RESULTS_END -->
 
-The original resume figures of 87% accuracy and +12% downstream gain are **not verified by this repository**. The full datasets, training runs and AWS service cannot be reached/executed in the packaging environment, so those figures are not presented as results. A `scripts/run_experiments.sh` script runs the comparison once real data is ingested. A model improvement is a hypothesis to test, not a guaranteed outcome. For CIFAR-100 especially, model accuracy depends strongly on compute budget, architecture and training schedule.
+A model improvement is a hypothesis to test, not a guaranteed outcome. For CIFAR-100 especially, model accuracy depends strongly on compute budget, architecture and training schedule.
 
 ## Start locally (PostgreSQL + S3-compatible MinIO)
 
